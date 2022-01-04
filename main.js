@@ -38,8 +38,8 @@ function new_image()
 window.addEventListener("keydown", my_keydown);
 
 function my_keydown(e)
-{
-	keyPressed == e.keyCode;
+{ 
+	keyPressed = e.keyCode;
 	console.log(keyPressed);
 	if((ball_x==hole_x)&&(ball_y==hole_y)){
 	canvas.remove(ball_obj)
@@ -77,6 +77,7 @@ else{
 			console.log("when up arrow are pressed,X ="+ball_x+", y="+ball_y);
 			canvas.remove(ball_obj);
 			new_image();
+		}
 	}
 
 	function down()
@@ -97,7 +98,7 @@ else{
 	{
 		if(ball_x >5)
 		{
-				ball_x=ball_x+block_image_height;
+				ball_x=ball_x-block_image_height;
 				console.log("block_image_height ="+block_image_height);
 				console.log("when left arrow are pressed,X ="+ball_x+", y="+ball_y);
 				canvas.remove(ball_obj);
@@ -116,4 +117,3 @@ else{
 			new_image();		
 		}	
 	}
-}
